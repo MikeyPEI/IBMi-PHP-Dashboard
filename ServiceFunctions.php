@@ -10,6 +10,8 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+include __DIR__ . '/template/config.php';  // rename file in template directory to config.php
+?>
 
 // Db2 Connection via PDO
 
@@ -17,7 +19,7 @@ function getDb2Connection(): PDO
 {
     // connect to IBM i
     try {
-        $conn = new PDO("odbc:*LOCAL", "PHPUSER", "phpuser1");
+        $conn = new PDO("odbc:*LOCAL", DBUSER, DBPASS);
     } catch (PDOException $exception) {
         echo "Connection failed. Please investigate";
         exit;
