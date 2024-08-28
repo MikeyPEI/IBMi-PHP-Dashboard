@@ -2,6 +2,6 @@
 
 
 // login credentials for ODBC on IBM i
-define("DBUSER", "");
-define("DBPASS", "");
+const DBUSER = "";
+const DBPASS = "";
 
